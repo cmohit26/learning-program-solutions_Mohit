@@ -1,0 +1,61 @@
+QUESTION
+	Scenario:
+		You are developing a task management system where tasks need to be added, deleted, and traversed efficiently.
+		Steps:
+
+		1.	Understand Linked Lists:
+			a.	Explain the different types of linked lists (Singly Linked List, Doubly Linked List).
+		4.	Analysis:
+			a.	Analyze the time complexity of each operation.
+			b.	Discuss the advantages of linked lists over arrays for dynamic data.
+
+
+
+
+
+SOLUTION
+
+    1.
+         a. Types of Linked Lists
+			1. Singly Linked List
+				-Structure: Each node contains:
+					- Data
+					- A pointer to the next node
+				-Traversal: Only forward
+				-Memory: Less memory per node (only one pointer)
+
+				Example:
+					[data | next] -> [data | next] -> null
+
+			2. Doubly Linked List
+				- Structure: Each node contains:
+					- Data
+					- A pointer to the next node
+				- A pointer to the previous node
+				- Traversal: Both forward and backward
+				- Memory: Requires more memory due to the additional pointer
+
+				Example:
+					null <- [prev | data | next] <-> [prev | data | next] -> null
+
+
+	4.
+        a. Time Complexity of Operations
+
+				Operation				Singly Linked List		Doubly Linked List
+			Insertion at Head				O(1)						O(1)
+			Insertion at Tail				O(n)						O(1)
+			Deletion at Head				O(1)						O(1)
+			Deletion at Tail				O(n)						O(1)
+			Search	O(n)					O(n)						O(n)
+			Access by Index	O(n)			O(n)						O(1)
+
+
+    4.
+        b. Advantages of Linked Lists Over Arrays
+
+			- Can grow or shrink easily (dynamic size)
+			- Easy to insert/delete items (no shifting)
+			- Uses only needed memory
+			- No need to resize like arrays
+			- No wasted space

@@ -1,0 +1,58 @@
+QUESTION
+	Scenario: 
+		You are tasked with sorting customer orders by their total price on an e-commerce platform. This helps in prioritizing high-value orders.
+		
+		Steps:
+		
+		1.	Understand Sorting Algorithms:
+			a.	Explain different sorting algorithms (Bubble Sort, Insertion Sort, Quick Sort, Merge Sort).
+		4.	Analysis:
+			a.	Compare the performance (time complexity) of Bubble Sort and Quick Sort.
+			b.	Discuss why Quick Sort is generally preferred over Bubble Sort.
+
+
+
+SOLUTION
+
+    1.
+        a. What is Big O Notation?
+			
+			1. Bubble Sort
+				How it works:
+					Repeatedly compares adjacent elements and swaps them if they are in the wrong order.
+					This “bubbles up” the largest unsorted element to the end in each pass.
+
+			2. Insertion Sort
+				How it works:
+					Builds the sorted list one element at a time.
+					Takes each element and inserts it into its correct position in the already sorted part.
+
+			3. Quick Sort
+				How it works:
+					Selects a “pivot” element.
+					Partitions the array so that elements less than pivot come before it, and greater elements come after.
+					Recursively applies the same to the partitions.
+
+			4. Merge Sort
+				How it works:
+					Divides the array into two halves.
+					Recursively sorts each half.
+					Merges the two sorted halves back into one sorted array.
+
+				
+	4.
+        a. Performance Comparison: Bubble Sort vs Quick Sort
+
+			Sorting Algorithm	Best Case		Average Case	Worst Case		Space Complexity
+			Bubble Sort			O(n)			O(n^2)			O(n^2)			O(1) (in-place)
+			Quick Sort			O(n log n)		O(n log n)		O(n^2)(rare)		O(log n) (recursive)
+	
+			
+    4.
+        b. Why is Quick Sort Generally Preferred?
+		
+			- Speed: Quick Sort is typically much faster for average and large inputs because it has an average-case time complexity of O(n log n).
+			- Efficiency: It performs fewer comparisons and swaps than Bubble Sort.
+			- Divide and Conquer: Quick Sort’s approach allows it to break the problem into smaller, manageable pieces recursively.
+			- Practical Performance: Despite worst-case O(n²), good pivot strategies usually avoid this.
+			- Bubble Sort is mostly educational or for very small datasets due to its simplicity but poor scalability.
