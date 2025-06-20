@@ -1,0 +1,68 @@
+QUESTION
+    Scenario:
+        You are developing an inventory management system for a warehouse. Efficient data storage and retrieval are crucial.
+        Steps:
+
+        1.	Understand the Problem:
+            a. Explain why data structures and algorithms are essential in handling large inventories.
+            b. Discuss the types of data structures suitable for this problem.
+
+        4.	Analysis:
+            a. Analyze the time complexity of each operation (add, update, delete) in your chosen data structure.
+            b. Discuss how you can optimize these operations.
+
+
+SOLUTION
+
+    1.
+        a.  Why Data Structures are important?
+
+            Data structures and algorithms are crucial in managing large inventories because they:
+                1: Eefficient storage and access mechanisms are needed to keep operations fast (e.g., searching, updating).
+
+				2: It enables fast lookups to avoid slow searches
+
+				3: Better for Organizing data logically and clearly
+
+				4: Saves memory
+
+	1.
+		b. The types of data structures suitable for this problem
+
+			(Current) HashMap
+				Pros: O(1) Fast searching/accessing
+				Cons: Keys have to be unique
+
+			ArrayList
+				Pros: Simple to use
+				Cons: O(n) time for searching
+
+			TreeMap ->
+				Pros: Sorted order
+				Cons: (log n) operation time
+
+			Database/Indexed Files ->
+				Pros: Huge Data
+				Cons: Complex internal systems
+
+    4.
+        a.  Time complexity for operations operation (add, update, delete)
+
+            Data structures and algorithms are crucial in managing large inventories because they:
+
+				Add		:O(1) average, O(n) worst case
+				Update	:O(1) average
+				Delete	:O(1) average
+				Search 	:O(1) average
+
+    4.
+        b.   How you can optimize these operations
+
+			a: Optimize the hash function
+				- Good distribution of id's helping to avoid collisions
+
+			b: Index other fields
+				- If lookups were needed by other fields
+
+			c: Usage of treeMap
+				- Helpful as it stores sorted maps - (Faster for sorting, accessing...)

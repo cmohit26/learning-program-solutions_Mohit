@@ -1,0 +1,49 @@
+QUESTION
+    Scenario:
+		You are working on the search functionality of an e-commerce platform. The search needs to be optimized for fast performance.
+		Steps:
+
+		1.	Understand Asymptotic Notation:
+			a.	Explain Big O notation and how it helps in analyzing algorithms.
+			b.	Describe the best, average, and worst-case scenarios for search operations.
+		4.	Analysis:
+			a.	Compare the time complexity of linear and binary search algorithms.
+			b.	Discuss which algorithm is more suitable for your platform and why.
+
+
+SOLUTION
+
+    1.
+        a. What is Big O Notation?
+
+			Big O notation is a mathematical notation that describes the limiting behavior of a function. It focuses on how the algorithm scales, helping developers compare efficiency.
+
+			Why it's useful:
+				Ignores machine-specific constants
+				Focuses on growth rate
+				Helps identify bottlenecks in performance
+
+	1.
+		b. Best, Average, and Worst Case in Search Operations
+
+			Best Case		: The item is found at the first (or most optimal) position.
+			Average Case	: The item is somewhere in the middle.
+			Worst Case		: The item is not found or is at the last position (for linear) or many splits are required (binary).
+
+
+    4.
+        a. Time Complexity Comparison
+
+			Linear Search	BEST: O(1)	AVERAGE: O(n/2) ≈ O(n)	WORST: O(n)
+			Binary Search	BEST: O(1)	AVERAGE: O(log n)		WORST: O(log n)
+
+    4.
+        b. Which is Better for an E-commerce Platform?
+			Binary Search is generally more suitable, but only if the data is sorted (or indexed). Here's why:
+				Speed: Binary search is much faster (O(log n)) for large datasets — perfect for large product catalogs.
+				Scalability: As the number of products grows, log(n) scales much better than O(n).
+				User Experience: Faster search = better UX, lower bounce rates.
+
+			When Linear Search is useful:
+				For small datasets or ad hoc filters.
+				When data is not sorted and performance is less critical.
