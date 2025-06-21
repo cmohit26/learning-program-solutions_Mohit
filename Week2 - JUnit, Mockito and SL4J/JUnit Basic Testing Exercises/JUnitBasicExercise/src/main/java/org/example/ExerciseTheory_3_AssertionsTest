@@ -1,0 +1,15 @@
+
+What Are Assertions in JUnit?
+
+	-> Assertions are statements that check expected vs actual results in a test.
+	-> They help you verify that your code works as intended.
+	-> If the assertion fails, the test fails. If all assertions pass, the test passes.
+
+
+
+Steps to Do It
+
+	Step 1 -> Create a test class — name it something like AssertionsTest.
+	Step 2 -> Use the @Test annotation to mark test methods.
+	Step 3 -> Use assertion methods like assertEquals, assertTrue, assertFalse, etc.
+	Step 4 -> Run the test in your IDE or with a build tool (like Maven or Gradle).

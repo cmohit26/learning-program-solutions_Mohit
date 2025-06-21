@@ -1,0 +1,45 @@
+A-A-A for Junit-4
+
+------------------------------------------------------------------------------------
+
+1. A-A-A Explained
+
+	A-A-A: Arrange-Act-Assert is a Testing Pattern
+
+	1. Arrange
+		Prepare the environment and inputs:
+			Create objects.
+			Set up necessary data.
+			Configure dependencies.
+
+	2. Act
+		Perform the action you want to test:
+			Call the method or functionality you are testing.
+
+	3. Assert
+		Verify the result:
+			Use assertions to check that the actual result matches the expected outcome.
+
+------------------------------------------------------------------------------------
+
+
+2. @Before and @After in JUnit4
+
+	@Before: Marks a method that should run before each test method.
+		-> Used to set up test fixtures (e.g., creating objects, opening resources).
+
+	@After: Marks a method that should run after each test method.
+		-> Used to clean up after tests (e.g., nullifying objects, closing resources).
+
+------------------------------------------------------------------------------------
+
+3. Why A-A-A in JUnit4
+
+	The AAA pattern isn't required by JUnit, but it's a best practice that helps make tests readable, maintainable, and easy to understand.
+
+------------------------------------------------------------------------------------
+
+4. Benefits:
+	Reuse test object setup.
+	Avoid duplicating code in every test.
+	Make tests easier to read and maintain.

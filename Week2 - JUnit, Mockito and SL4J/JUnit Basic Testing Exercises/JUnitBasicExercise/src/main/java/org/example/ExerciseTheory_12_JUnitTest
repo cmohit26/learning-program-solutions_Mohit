@@ -1,0 +1,73 @@
+1. Creating a project (INTELLIJ)
+
+	-> HAS to be JAVA Project
+	-> HAS to be MAVEN (pom.xml)
+
+------------------------------------------------------------------------------------
+
+2. Add JUnit Dependency in pom.xml
+
+	Using the following lines
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+------------------------------------------------------------------------------------
+
+3. Create Java Class (Any)
+
+	Step 1 -> Right-click src/main/java.
+	Step 2 -> Choose New → Java Class.
+	Step 3 -> Name it something like Calculator.
+
+	Example class
+
+		package org.example;
+
+		public class Calculator {
+			public int add(int a, int b) {
+				return a + b;
+			}
+
+			public int multiply(int a, int b) {
+				return a * b;
+			}
+		}
+
+------------------------------------------------------------------------------------
+
+4. Step 4: Create a JUnit Test Class
+
+	Step 1 -> Right-click in the Calculator.
+	Step 2 -> Generate → Test (Alt+Insert)
+	Step 3 -> Choose JUnit4 | JUnit5 depending on your dependency.
+	Step 4 -> Click OK.
+
+	EXAMPLE
+
+		package org.example;
+		import org.junit.jupiter.api.Test;
+		import static org.junit.jupiter.api.Assertions.*;
+
+		class CalculatorTest {
+
+			@Test
+			void testAdd() {
+				Calculator calc = new Calculator();
+				assertEquals(5, calc.add(2, 3));
+			}
+
+			@Test
+			void testMultiply() {
+				Calculator calc = new Calculator();
+				assertEquals(2, calc.divide(6, 3));
+			}
+		}
+
+------------------------------------------------------------------------------------
