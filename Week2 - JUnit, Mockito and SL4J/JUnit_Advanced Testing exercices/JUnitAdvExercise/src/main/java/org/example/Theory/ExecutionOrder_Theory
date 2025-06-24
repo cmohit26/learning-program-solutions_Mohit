@@ -1,0 +1,41 @@
+---------------------------------------------------------------------------------------
+
+Testing Execution Order?? (@TestMetodOrder and @Order)
+
+	-> By default, JUnit 5 does not guarantee the order in which test methods are executed.
+	-> However, if order matters for your test logic (not usually recommended), you can explicitly control it.
+
+	✅ 1. @TestMethodOrder
+		-> This annotation is applied at the class level to define how test methods should be ordered.
+		-> It takes a MethodOrderer as a parameter.
+
+		Common MethodOrderers:
+			OrderAnnotation.class: Uses @Order annotations
+			MethodName.class: Sorts methods alphabetically by name
+			DisplayName.class: Orders by @DisplayName (if present)
+			Random.class: Executes methods in random order
+
+	✅ 2. @Order
+		-> This is used at the method level to specify the explicit order of execution
+		-> Applied when using @TestMethodOrder(MethodOrderer.OrderAnnotation.class).
+
+	EXAMPLE
+
+		import org.junit.jupiter.api.*;
+
+		@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+		public class OrderedTests {
+
+			@Test
+			@Order(2)
+			void secondTest() {
+				System.out.println("Second test");
+			}
+
+			@Test
+			@Order(1)
+			void firstTest() {
+				System.out.println("First test");
+			}
+		}
+

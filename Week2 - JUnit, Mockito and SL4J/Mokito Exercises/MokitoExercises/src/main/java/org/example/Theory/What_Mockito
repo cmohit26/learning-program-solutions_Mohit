@@ -1,0 +1,58 @@
+What is Mockito?
+	-> Mockito is a mocking framework used alongside testing tools like JUnit and TestNG
+	-> It lets you create fake versions of real code components, so you can test one part of your code without worrying about its dependencies.
+
+------------------------------------------------------------------------------------------------------------------------
+
+Why use it?
+	-> Isolation: It keeps your tests focused by replacing slow or complex parts (like databases, web services) with lightweight stand-ins.
+	-> Speed: Tests run faster because you're not waiting on real services.
+	-> Clarity: You can specify what mock objects return and then verify how your code uses them—did it call the right method? How many times? With which input?
+	-> Simplicity: Mockito uses a clean, easy-to-read syntax like mock(), when(...).thenReturn(...), and verify(...).
+
+------------------------------------------------------------------------------------------------------------------------
+
+Ho it works: (3 easy steps)
+
+	1 -> Mock it – Create a fake object:
+		List myList = mock(List.class);
+
+	2 -> Stub it – Set how it should behave:
+		when(myList.get(0)).thenReturn("Hello");
+
+	3 -> Verify it – Check if your code used the mock correctly:
+		verify(myList).add("item");
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+SIMPLE KIDS TERMS:
+
+	You’re playing a game where your Toy Robot listens to your Remote Control and then does something.
+	But today, you want to test if the Robot listens correctly without using the real remote.
+	So, you create a fake remote (a "mock") just for testing!
+
+	CODE:
+
+		// 1. Import Mockito tools
+		import static org.mockito.Mockito.*;
+		import java.util.List;
+
+		public class SimpleMockExample {
+			public static void main(String[] args) {
+				// 2. Create a fake toy (mock)
+				List<String> toyBox = mock(List.class);
+
+				// 3. Pretend that if someone asks "what's toy number 0?", it says "Teddy"
+				when(toyBox.get(0)).thenReturn("Teddy");
+
+				// 4. Use the fake toy
+				String toy = toyBox.get(0);
+
+				// 5. Print it
+				System.out.println(toy);  // Output: Teddy
+
+				// 6. Check if we asked for toy number 0
+				verify(toyBox).get(0);
+			}
+		}

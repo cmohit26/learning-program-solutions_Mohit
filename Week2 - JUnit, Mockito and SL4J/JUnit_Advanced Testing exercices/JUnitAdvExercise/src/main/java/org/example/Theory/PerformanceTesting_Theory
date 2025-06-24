@@ -1,0 +1,17 @@
+---------------------------------------------------------------------------------------
+
+Performance Testing in JUnit??
+
+	-> Performance testing means checking how fast or efficient your code runs, often by measuring whether it completes within a certain time limit.
+	-> While JUnit is mainly designed for functional testing (checking correctness), it also provides some simple tools to help you assert your code runs within expected time limits.
+
+	assertTimeout()
+		-> Asserts that a piece of code finishes execution within a specified duration.
+		-> If the code takes longer than the timeout, the test fails.
+		-> Does not interrupt the code if it exceeds the timeout — it waits for completion then fails.
+
+		assertTimeout(Duration.ofMillis(500), () -> {
+			// Code that should finish within 500 milliseconds
+		});
+
+---------------------------------------------------------------------------------------
