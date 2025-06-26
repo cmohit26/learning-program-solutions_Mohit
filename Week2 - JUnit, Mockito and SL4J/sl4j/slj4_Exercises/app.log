@@ -1,0 +1,5 @@
+00:24:46.928 [main] INFO  org.example.DifferentAppendersDemo - This is an INFO message.
+00:24:46.931 [main] DEBUG org.example.DifferentAppendersDemo - This is a DEBUG message.
+00:24:46.931 [main] WARN  org.example.DifferentAppendersDemo - This is a WARN message.
+00:24:46.931 [main] ERROR org.example.DifferentAppendersDemo - This is an ERROR message.
+00:24:46.931 [main] INFO  org.example.DifferentAppendersDemo - User Bob attempted to login 3 times.
