@@ -82,7 +82,7 @@ public class ServiceTest {
         verify(mockNetworkClient, times(1)).connect();
     }
 
-    //Example 5 
+    //Example 5
     @Test
     public void testServiceWithMultipleReturnValues() {
         // 1. Create mock object
